@@ -36,16 +36,26 @@ body {
 }
 
 /* arrange the puzzle pieces on the board */
+.tl, .bl { text-align: right; }
+.tr img { bottom: 0; }
+.tl img { bottom: 0, right: 0; }
+.bl img { right: 0; }
 
-
+.drop-zone img {
+	width: auto; !important;
+	padding: 0; !important;
+	cursor: default;
+	position: absolute;
+}
 
 /* set up drop zones */
 
 .drop-zone { 
 	display: block;
-	width: 50%;
-	height: 50%;
-	border: 1px dotted white; }
+	width: 49.5%;
+	height: 49.5%;
+	border: thin dashed white;
+	float: right; }
 
 /* end board styles */
 
