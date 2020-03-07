@@ -101,3 +101,16 @@ footer {
 }
 
 #buttonHolder img:hover { opacity: .5; }
+
+#resetButton {
+	padding: 10px;
+	font-size: 14px;
+	background-color: white;
+	border: none;
+	cursor: pointer;
+}
+
+#resetButton:hover {
+	background-color: gray;
+	cursor: pointer;
+}
