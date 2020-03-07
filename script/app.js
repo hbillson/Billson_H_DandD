@@ -33,12 +33,29 @@
 	}
 
 	function allowDrop(event) {
-		// event.preventDefault();
-		console.log('dropped on a drop zone');
+
+		debugger;
+
+		var zone = event.target;
+		console.log(zone.classList);
+
+
+		while (!zone.classList.contains("hasPiece")) {
+			// event.preventDefault();
+			console.log('dropped on a drop zone');
 		// go and get the dragged element's ID from the data transfer object
-		let currentImage = event.dataTransfer.getData("text/plain");
+			let currentImage = event.dataTransfer.getData("text/plain");
+			let currentPiece = document.querySelector(`#${currentImage}`);
 		// add that image to whatever drop zone we're dropping our image on
-		event.target.appendChild(document.querySelector(`#${currentImage}`));
+			zone.appendChild(currentPiece);
+			zone.classList.add("hasPiece");
+			currentPiece.classList.add("hasPiece");
+
+			return currentPiece;
+			return zone;
+		}
+		
+		return false;
 	}
 
 	// add event handling here -> how is the user going to use our app?
