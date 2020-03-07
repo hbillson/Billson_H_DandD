@@ -13,7 +13,6 @@ body {
 
 #game-boards { width: 100%; text-align: center; }
 
-
 .puzzle-pieces, .puzzle-board {
 	margin-top: 40px;
 	height: 400px;
@@ -36,26 +35,30 @@ body {
 }
 
 /* arrange the puzzle pieces on the board */
+
+
+
+/* set up drop zones */
+.drop-zone {
+	width: 49.5%;
+	height: 49.5%;
+	/* border: thin dashed white; */
+	float: left;
+	position: relative;
+}
+
 .tl, .bl { text-align: right; }
-.tr img { bottom: 0; }
-.tl img { bottom: 0, right: 0; }
-.bl img { right: 0; }
+.tr img { bottom: 0 }
+.tl img { bottom: 0; right: 0 }
+.bl img { right: 0 }
 
 .drop-zone img {
-	width: auto; !important;
-	padding: 0; !important;
+	width: auto !important;
+	padding: 0 !important;
 	cursor: default;
 	position: absolute;
 }
 
-/* set up drop zones */
-
-.drop-zone { 
-	display: block;
-	width: 49.5%;
-	height: 49.5%;
-	border: thin dashed white;
-	float: right; }
 
 /* end board styles */
 
@@ -74,10 +77,10 @@ header h1 {
 	margin: 10px 0
 }
 
-header p, footer p { 
-	font-size: 1.7em; 
-	letter-spacing: 2px; 
-	margin: 10px 0 
+header p, footer p {
+	font-size: 1.7em;
+	letter-spacing: 2px;
+	margin: 10px 0
 }
 
 footer {
